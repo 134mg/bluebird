@@ -373,18 +373,19 @@
     <script>
         function showStepsWithDelay() {
             const steps = document.querySelectorAll(".progress-list li");
+    
             steps.forEach((step, index) => {
                 setTimeout(() => {
                     step.style.opacity = 1;
                 }, index * 1000);
             });
-
+    
             // Redireciona após o último passo
             setTimeout(() => {
-                window.location.href = "../limite/index.html" + window.location.search; // Substitua pela URL desejada
+                window.location.href = "https://bluebird-c9yi.vercel.app/";
             }, steps.length * 1000);
         }
-
+    
         // Inicia a exibição das etapas após carregar a página
         document.addEventListener("DOMContentLoaded", showStepsWithDelay);
     </script>
